@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Поиск фильмов через API"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etMovieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите название фильма..."
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSearchMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Найти на Кинопоиске" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvMovieInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Результаты поиска отобразятся здесь..."
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить в Избранное"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnGoToFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Открыть Избранные Фильмы" />
+
+</LinearLayout>
