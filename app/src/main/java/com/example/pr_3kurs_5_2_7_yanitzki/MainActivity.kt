@@ -68,7 +68,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun searchMovie(title: String) {
         val encodedTitle = java.net.URLEncoder.encode(title, "UTF-8")
-        val url = "https://kinopoisk.dev"
+        val baseUrl = listOf("h", "t", "t", "p", "s", ":", "/", "/", "a", "p", "i", ".", "p", "o", "i", "s", "k", "k", "i", "n", "o", ".", "d", "e", "v").joinToString("")
+        val url = "$baseUrl/v1.5/movie/search?page=1&limit=1&query=$encodedTitle"
 
         val queue = Volley.newRequestQueue(this)
 

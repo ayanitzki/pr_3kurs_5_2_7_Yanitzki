@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LibraryActivity"
+    android:background="@color/backgroundColor"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -13,14 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="← Назад"
-        android:backgroundTint="#888888"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="#2E2E2E"
+        android:textColor="@color/textColorPrimary"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Мой топ фильмов"
+        android:textColor="@color/textColorPrimary"
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
@@ -29,15 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Удерживайте фильм для удаления из базы данных"
-        android:textColor="#777777"
+        android:textColor="@color/textColorSecondary"
         android:textSize="12sp"
         android:layout_marginBottom="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMovies"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

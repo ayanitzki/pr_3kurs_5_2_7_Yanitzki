@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@color/backgroundColor"
     tools:context=".LoginActivity"
     android:padding="24dp">
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
+        android:textColor="@color/textColorPrimary"
         android:textSize="32dp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp" />
@@ -23,6 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/for_etLogin"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorSecondary"
+        android:backgroundTint="@color/colorPrimary"
         android:inputType="text"
         android:layout_marginBottom="16dp" />
 
@@ -31,6 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/for_etPassword"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorSecondary"
+        android:backgroundTint="@color/colorPrimary"
         android:inputType="textPassword"
         android:layout_marginBottom="24dp" />
 
@@ -38,7 +45,10 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
         android:text="@string/for_btnLogin" />
+
 
 
 </LinearLayout>

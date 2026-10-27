@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Моя библиотека</string>
+    <string name="app_name">Кинопоиск</string>
     <string name="for_etIsbn">Введите ISBN (например, 9780140328721)</string>
     <string name="for_btnSearch">Найти книгу</string>
     <string name="for_btnSaveBook">Сохранить в библиотеку</string>

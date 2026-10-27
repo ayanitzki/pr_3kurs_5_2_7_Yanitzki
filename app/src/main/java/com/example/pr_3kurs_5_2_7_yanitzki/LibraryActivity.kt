@@ -26,10 +26,10 @@ class LibraryActivity : AppCompatActivity() {
 
         val btnBackToMain = findViewById<Button>(R.id.btnBackToMain)
         btnBackToMain.setOnClickListener {
-            finish() // Закрывает этот экран и возвращает на предыдущий (MainActivity)
+            finish() //Закрывает этот экран и возвращает на предыдущий (MainActivity)
         }
 
-        val rvMovies = findViewById<RecyclerView>(R.id.rvMovies) // Оставляем ID разметки друга
+        val rvMovies = findViewById<RecyclerView>(R.id.rvMovies)
         rvMovies.layoutManager = LinearLayoutManager(this)
         adapter = MovieAdapter()
         rvMovies.adapter = adapter
@@ -55,7 +55,7 @@ class LibraryActivity : AppCompatActivity() {
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(android.R.layout.simple_list_item_2, parent, false)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_list_item, parent, false)
             return MovieViewHolder(view)
         }
 
@@ -64,7 +64,7 @@ class LibraryActivity : AppCompatActivity() {
             holder.text1.text = movie.name
             holder.text2.text = "Год: ${movie.year}, Рейтинг КП: ${movie.rating}"
 
-            // Удаление по долгому нажатию
+            //Удаление по долгому нажатию
             holder.itemView.setOnLongClickListener {
                 CoroutineScope(Dispatchers.IO).launch {
                     db.movieDao().deleteMovie(movie)
@@ -77,8 +77,8 @@ class LibraryActivity : AppCompatActivity() {
         override fun getItemCount() = movies.size
 
         inner class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val text1: TextView = view.findViewById(android.R.id.text1)
-            val text2: TextView = view.findViewById(android.R.id.text2)
+            val text1: TextView = view.findViewById(R.id.tvMovieName)
+            val text2: TextView = view.findViewById(R.id.tvMovieInfo)
         }
     }
 }

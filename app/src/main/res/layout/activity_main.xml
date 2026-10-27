@@ -7,12 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Поиск фильмов через API"
+        android:textColor="@color/textColorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp"/>
@@ -22,13 +24,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Введите название фильма..."
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorSecondary"
+        android:backgroundTint="@color/colorPrimary"
         android:inputType="text" />
 
     <Button
         android:id="@+id/btnSearchMovie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
         android:text="Найти на Кинопоиске" />
 
     <ScrollView
@@ -43,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Результаты поиска отобразятся здесь..."
+            android:textColor="@color/textColorSecondary"
             android:textSize="16sp" />
     </ScrollView>
 
@@ -50,6 +58,8 @@
         android:id="@+id/btnSaveMovie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
         android:text="Добавить в Избранное"
         android:visibility="gone" />
 
@@ -58,6 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:backgroundTint="#2E2E2E"
+        android:textColor="@color/textColorPrimary"
         android:text="Открыть Избранные Фильмы" />
 
 </LinearLayout>
